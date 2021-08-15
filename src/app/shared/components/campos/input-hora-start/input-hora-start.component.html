@@ -1,0 +1,11 @@
+<div [formGroup]="formGroup">
+    <mat-form-field class="full-width">
+        <mat-label>Start Hour *</mat-label>
+        <input matInput 
+        [name]="titulo" 
+        [formControlName]="controlName" 
+        [placeholder]="controlName">
+        <mat-error *ngIf="validacao.hasErrorValidar(formControl,'required')">Campo obrigátorio</mat-error>
+        <mat-error *ngIf="validacao.hasErrorValidar(formControl,'pattern')">Formato valído 99:99</mat-error>
+    </mat-form-field>
+</div>

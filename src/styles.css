@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.btnAdd {
+    background-color: #3f51b5;
+    color           : #fff;
+}
+
+.btnSucesso {
+    background-color: #096b38;
+    color           : #fff !important;
+}
+
+
+
+.container-btnAdd {
+    padding-bottom: 1rem;
+    margin-left   : 10%;
+}
+
+body {
+    margin: 0;
+  }
+  
+  .center {
+    margin: 10px auto;
+  }
+  
+  .width50 {
+    width: 50%;
+  }
+  
+  .width75 {
+    width: 75%;
+  }
+  
+  .main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .float-left {
+    float: left;
+  }
+  
+  .margin10 {
+    margin: 10px;
+  }
+  
+  .padding10 {
+    padding: 10px;
+  }
+  
+  .quebrar-linha {
+    white-space: pre-line;
+  }

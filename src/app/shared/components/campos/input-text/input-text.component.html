@@ -1,0 +1,16 @@
+<div [formGroup]="formGroup">
+    <mat-form-field class="full-width">
+        <mat-label>Name *</mat-label>
+        <input matInput 
+            [placeholder]="titulo" 
+            [name]="controlName" 
+            [formControlName]="controlName">
+
+        <mat-error *ngIf="validacao.hasErrorValidar(formControl,'required')">Required field</mat-error>
+        <mat-error
+            *ngIf="validacao.hasErrorValidar(formControl,'minlength') || validacao.hasErrorValidar(formControl,'maxlength')">
+            Field
+            must have a minimum of 4 and a maximum 
+            80 caracters</mat-error>
+    </mat-form-field>
+</div>

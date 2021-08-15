@@ -1,0 +1,42 @@
+<div class="main-div">
+
+    <form autocomplete="off" (ngSubmit)="onSubmit()" (ngReset)="reiniciarForm()" [formGroup]="formulario">
+        <h1>{{title}}</h1>
+
+        <apss-input-text titulo="Ex. Sala Java" controlName="name" [formGroup]="formulario"></apss-input-text>
+        <apss-input-date titulo="Date *" controlName="date" [formGroup]="formulario">
+        </apss-input-date>
+
+        <mat-form-field class="full-width">
+            <mat-label>Start Hour *</mat-label>
+            <input matInput name="Inicio" formControlName="startHour" mask="00:00" placeholder="99:99">
+            <mat-error *ngIf="validacao.hasErrorValidar(f.startHour,'required')">Required field</mat-error>
+            <mat-error *ngIf="validacao.hasErrorValidar(f.startHour,'pattern')">Hour invalid</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>End Hour *</mat-label>
+            <input matInput name="fim" formControlName="endHour" mask="00:00" placeholder="99:99">
+            <mat-error *ngIf="validacao.hasErrorValidar(f.endHour,'required')">Required field</mat-error>
+            <mat-error *ngIf="validacao.hasErrorValidar(f.endHour,'pattern')">Hour invalid</mat-error>
+        </mat-form-field>
+
+        <section class="example-section">
+            <mat-checkbox color="primary" formControlName="active">Status</mat-checkbox>
+        </section>
+
+
+        <div style="margin-top: 15px;">
+            <button type="submit" mat-button class="mat-elevation-z8 btnSucesso" mat-raised-button>
+                <mat-icon>check</mat-icon> Save
+            </button>
+            <button routerLink="/rooms" color="warn" mat-button class="mat-elevation-z8 btnCancel" mat-raised-button>
+                <mat-icon>cancel</mat-icon> Cancel
+            </button>
+        </div>
+
+    </form>
+
+
+
+</div>

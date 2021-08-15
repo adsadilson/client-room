@@ -1,0 +1,17 @@
+mat-card {
+    width : 34%;
+    height: 30%;
+    margin-left: 4rem;
+}
+
+h1 {
+    margin-left: 3%;
+    font-weight: normal;
+    line-height: 1;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.logo {
+    margin-left: 3%;
+}
